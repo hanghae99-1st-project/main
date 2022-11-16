@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Gowun Dodum', sans-serif;
+        }
+        nav{
+            background: #FFEEEE; /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #DDEFBB, #FFEEEE); /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #DDEFBB, #FFEEEE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+
+        .container-fluid {
+            margin: -8px 0;
+        }
+        .navbar-toggler{
+            background: #FFEEEE; /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #DDEFBB, #FFEEEE); /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #DDEFBB, #FFEEEE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+
+        .navbar-brand {
+            width: 30%;
+            text-align: center;
+        }
+
+        li {
+            padding-left: 30px;
+            text-align: center;
+        }
+
+        .selectcl {
+            display: flex;
+            flex-direction: row;
+            max-width: 300px;
+            width: 95%;
+            margin: 30px 0 30px 30px;
+        }
+
+        .selectcl > select {
+            margin-right: 20px;
+        }
+
+        .mish {
+            max-width: 1500px;
+            width: 95%;
+            padding: 10px;
+            margin: 0 auto;
+            border: 1px solid black;
+        }
+        .card-body{
+            display: flex;
+            flex-direction: row;
+        }
+        p{
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">소소미</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">글쓰기</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">마이페이지</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled">로그아웃</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<div class="selectcl">
+    <select class="form-select" aria-label="Default select example">
+        <option selected>카테고리</option>
+        <option value="1">한식</option>
+        <option value="2">중식</option>
+        <option value="3">일식</option>
+        <option value="4">양식</option>
+
+
+    </select>
+    <select class="form-select" aria-label="Default select example">
+        <option selected>지역</option>
+        <option value="1">서울시</option>
+        <option value="2">경기도</option>
+        <option value="3">강원도</option>
+        <option value="4">충청북도</option>
+        <option value="5">충청남도</option>
+        <option value="6">경상북도</option>
+        <option value="7">경상남도</option>
+        <option value="8">전라북도</option>
+        <option value="9">전라남도</option>
+    </select>
+</div>
+<main>
+    <div class="mish">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card">
+                    <img src="http://www.lampcook.com/wi_files/food_top100/top11/11_1_2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p># 가게이름</p>
+                        <p># 카테고리</p>
+                        <p># 지역</p>
+                        <p class="userwrite"># 작성자</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="http://www.lampcook.com/wi_files/food_top100/top11/11_1_2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p># 가게이름</p>
+                        <p># 카테고리</p>
+                        <p># 지역</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="http://www.lampcook.com/wi_files/food_top100/top11/11_1_2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p># 가게이름</p>
+                        <p># 카테고리</p>
+                        <p># 지역</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="http://www.lampcook.com/wi_files/food_top100/top11/11_1_2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p># 가게이름</p>
+                        <p># 카테고리</p>
+                        <p># 지역</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+</body>
+</html>

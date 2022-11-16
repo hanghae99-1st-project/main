@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>소소미</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+          integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <!--  폰트 어썸 cdn  -->
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Gowun Dodum', sans-serif;
+        }
+
+        body {
+            background: #FFEEEE; /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #DDEFBB, #FFEEEE); /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #DDEFBB, #FFEEEE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+
+        .login_name {
+            max-width: 1200px;
+            width: 95%;
+            margin: 100px auto 0;
+            text-align: center;
+        }
+
+        .login_name > h1 {
+            font-size: 55px;
+        }
+
+        .usid{
+            max-width: 300px;
+            width: 95%;
+            display: flex;
+            flex-direction: column;
+            margin: 50px auto 0;
+            border-radius: 30px;
+            font-size: large;
+        }
+
+        .uspw {
+            max-width: 300px;
+            width: 95%;
+            display: flex;
+            flex-direction: column;
+
+            margin: 10px auto 0;
+            font-size: large;
+        }
+
+        .inu {
+            height: 50px;
+            margin: 50px auto 0;
+            text-align: center;
+        }
+
+        .inu > button {
+            background-color: transparent;
+
+            height: 40px;
+            margin: 0 5px;
+            color: black;
+        }
+        .sumid{
+            color:red;
+            display: none;
+            font-size: medium;
+        }
+    </style>
+    <script>
+        function loginx(){
+            if($('#user_id').val().length===0){
+                $('#uid').show()
+            }
+            else if($('#user_pw').val().length===0){
+                $('#upw').show()
+            }
+            else{
+                $('#uid').hide()
+                $('#upw').hide()
+            }
+            $.ajax({
+                type:'POST',
+                url:'',
+                data:'',
+                success:function (response){
+
+                }
+            })
+        }
+
+    </script>
+</head>
+<body>
+<div class="login_name"><h1>소소미</h1></div>
+<!--<div class="idlogin">-->
+<!--    <p><label for="user_id">아이디</label></p>-->
+<!--    <input type="id" class="loinput" id="user_id" placeholder="name@example.com">-->
+<!--</div>-->
+<div class="usid">
+    <label for="user_id" class="form-label">아이디</label>
+    <input type="text" class="form-control" id="user_id" placeholder="아이디를 입력하세요">
+    <p class="sumid" id="uid">아이디를 입력해주세요</p>
+</div>
+<div class="uspw">
+    <label for="user_id" class="form-label">비밀번호</label>
+    <input type="text" class="form-control" id="user_pw" placeholder="비밀번호를 입력하세요">
+    <p class="sumid" id="upw">비밀번호를 입력해주세요</p>
+</div>
+</div>
+<div class="inu">
+    <i></i>
+    <button class="btn btn-primary" type="button">회원가입</button>
+    <button class="btn btn-primary" type="button" onclick="loginx()">로그인</button>
+</div>
+
+</body>
+</html>

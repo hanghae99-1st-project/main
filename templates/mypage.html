@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Gowun Dodum', sans-serif;
+        }
+
+        .container-fluid {
+            background: #FFEEEE; /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #DDEFBB, #FFEEEE); /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #DDEFBB, #FFEEEE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            margin: -8px 0;
+        }
+
+        .navbar-brand {
+            width: 30%;
+            text-align: center;
+        }
+
+        li {
+
+            padding-left: 30px;
+            text-align: center;
+        }
+        .usernik{
+            border: 1px solid black;
+            max-width: 500px;
+            width:95%;
+            height: 150px;
+            margin: 30px auto 0;
+            font-size: xx-large;
+            text-align: center;
+            padding-top: 15px;
+        }
+        .usernik>button{
+            background-color:transparent;
+            color:black;
+        }
+        .onlymy{
+            max-width: 1000px;
+            width: 95%;
+            border: 1px solid black;
+            margin: 50px auto 0;
+            padding: 15px;
+            display: none;
+        }
+
+        .card-body{
+            display: flex;
+            flex-direction: row;
+        }
+
+        p{
+            margin-right: 10px;
+        }
+    </style>
+    <script>
+        function soview(){
+            $('#viewall').show()
+        }
+        function clview(){
+            $('#viewall').hide()
+        }
+    </script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">소소미</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">글쓰기</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">마이페이지</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled">로그아웃</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<main>
+    <div class="usernik">
+        <p>회원 닉네임 : @@@</p>
+        <button type="button" class="btn btn-primary" onclick="soview()">내가 쓴글 보기</button>
+        <button type="button" class="btn btn-primary" onclick="clview()">닫기</button>
+    </div>
+</main>
+<main>
+    <div class="onlymy" id="viewall">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+                <div class="card">
+                    <img src="http://www.lampcook.com/wi_files/food_top100/top11/11_1_2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p># 가게이름</p>
+                        <p># 카테고리</p>
+                        <p># 지역</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="http://www.lampcook.com/wi_files/food_top100/top11/11_1_2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p># 가게이름</p>
+                        <p># 카테고리</p>
+                        <p># 지역</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="http://www.lampcook.com/wi_files/food_top100/top11/11_1_2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p># 가게이름</p>
+                        <p># 카테고리</p>
+                        <p># 지역</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="http://www.lampcook.com/wi_files/food_top100/top11/11_1_2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p># 가게이름</p>
+                        <p># 카테고리</p>
+                        <p># 지역</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="http://www.lampcook.com/wi_files/food_top100/top11/11_1_2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p># 가게이름</p>
+                        <p># 카테고리</p>
+                        <p># 지역</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="http://www.lampcook.com/wi_files/food_top100/top11/11_1_2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p># 가게이름</p>
+                        <p># 카테고리</p>
+                        <p># 지역</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="http://www.lampcook.com/wi_files/food_top100/top11/11_1_2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p># 가게이름</p>
+                        <p># 카테고리</p>
+                        <p># 지역</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>
